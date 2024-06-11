@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rest Countries API</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <p id="title">Where in the world?</p>
+        <button class="btn__mode">
+          <ion-icon name="moon-outline"></ion-icon>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </header>
+    <div class="container">
+      <section>
+        <div class="toolbar">
+          <div class="search-bar">
+            <input
+              type="search"
+              name="search"
+              id="search-input"
+              placeholder="Search for a country..."
+              autocomplete="off"
+            />
+            <ion-icon id="search-icon" name="search-outline"></ion-icon>
+            <div class="search-options"></div>
+          </div>
+          <div class="filter-bar">
+            <div id="select-btn">
+              <span id="select-text">Filter by Region</span>
+              <ion-icon id="filter-icon" name="chevron-down-outline"></ion-icon>
+            </div>
+            <ul class="options hidden">
+              <li class="option" data-value="Africa">Africa</li>
+              <li class="option" data-value="America">America</li>
+              <li class="option" data-value="Asia">Asia</li>
+              <li class="option" data-value="Europe">Europe</li>
+              <li class="option" data-value="Oceania">Oceania</li>
+              <li class="option" data-value="All Regions">All Regions</li>
+            </ul>
+          </div>
+        </div>
+        <div class="countries"></div>
+        <div class="load">
+          <button class="btn--load hidden">Load more</button>
+        </div>
+      </section>
+      <div class="item hidden">
+        <div class="item-inner">
+          <button class="btn--back">
+            <ion-icon id="back-icon" name="arrow-back-outline"></ion-icon>
+            <span>Back</span>
+          </button>
+          <div class="item-body"></div>
+        </div>
+      </div>
+      <div class="go-up hidden">
+        <ion-icon name="caret-up-circle-outline"></ion-icon>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
